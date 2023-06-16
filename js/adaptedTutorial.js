@@ -1,19 +1,20 @@
 var map;
 
 function loadMap(){
-    map = L.map('map').setView([29.53,-36.607], 2);
+    map = L.map('tutorialMap').setView([0,0], 1);
 
-	L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-		maxZoom: 19,
-		attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
-		}).addTo(map);
+    L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    maxZoom: 19,
+    attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+    }).addTo(map);
+
 
     getData();
 };
 
 var geojsonMarkerOptions = {
     radius: 8,
-    fillColor: "#826ab8",
+    fillColor: "#ff7800",
     color: "#000",
     weight: 1,
     opacity: 1,
@@ -32,7 +33,7 @@ function onEachFeature(feature, layer) {
 };
 
 function getData(){
-    fetch("data/marathonWinners.geojson")
+    fetch("data/MegaCities.geojson")
         .then(function(response){
             return response.json();
         })
@@ -46,4 +47,4 @@ function getData(){
         })
 };
 
-document.addEventListener('DOMContentLoaded', loadMap);
+document.addEventListener('DOMContentLoaded', loadMap)

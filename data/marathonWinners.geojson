@@ -1,0 +1,410 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+      {
+        "type": "Feature",
+        "properties": {
+          "Marathon": "London",
+          "2015 - Men": "Eliud Kipchoge (2:04:42)",
+          "2015 - Women": "Tigist Tufa (2:32:21)",
+          "2016 - Men": "Eliud Kipchoge (2:03:05)",
+          "2016 - Women": "Jemima Sumgong (2:22:58)",
+          "2017 - Men": "Daniel Wanjiru (2:05:48)",
+          "2017 - Women": "Mary Keitany (2:17:01)",
+          "2018 - Men": "Eliud Kipchoge (2:04:17)",
+          "2018 - Women": "Vivian Cheruiyot (2:18:31)",
+          "2019 - Men": "Eliud Kipchoge (2:02:37)",
+          "2019 - Women": "Brigid Kosgei (2:18:20)",
+          "2020 - Men": "Shura Kitata Tola (2:05:58)",
+          "2020 - Women": "Brigid Kosgei (2:18:58)",
+          "2021 - Men": "Sisay Lemma (2:04:01)",
+          "2021 - Women": "Joyciline Jepkosgei (2:17:43)"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -0.099076,
+            51.509648
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "Marathon": "Berlin",
+          "2015 - Men": "Eliud Kipchoge (2:04:00)",
+          "2015 - Women": "Gladys Cherono (2:19:25)",
+          "2016 - Men": "Kenenisa Bekele(2:03:03)",
+          "2016 - Women": "Aberu Kebede (2:20:45)",
+          "2017 - Men": "Eliud Kipchoge (2:03:32)",
+          "2017 - Women": "Gladys Cherono (2:20:23)",
+          "2018 - Men": "Eliud Kipchoge (2:01:39)",
+          "2018 - Women": "Gladys Cherono (2:18:11)",
+          "2019 - Men": "Kenenisa Bekele(2:01:41)",
+          "2019 - Women": "Ashete Bekere (2:20:14)",
+          "2020 - Men": "cancelled",
+          "2020 - Women": "cancelled",
+          "2021 - Men": "Guye Adola (2:05:45)",
+          "2021 - Women": "Gotytom Gebreslase (2:20:09)"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            13.40732,
+            52.52045
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "Marathon": "New York City",
+          "2015 - Men": "Stanley Biwott (2:10:34)",
+          "2015 - Women": "Mary Keitany (2:24:25)",
+          "2016 - Men": "Ghirmay Ghebreslassie (2:07:51)",
+          "2016 - Women": "Mary Keitany (2:24:26)",
+          "2017 - Men": "Geoffrey Kamworor (2:10:53)",
+          "2017 - Women": "Shalane Flanagan (2:26:53)",
+          "2018 - Men": "Lelisa Desisa (2:05:59)",
+          "2018 - Women": "Mary Keitany (2:22:48)",
+          "2019 - Men": "Geoffrey Kamworor (2:08:13)",
+          "2019 - Women": "Joyciline Jepkosgei (2:22:38)",
+          "2020 - Men": "Kevin Quinn (2:23:48)",
+          "2020 - Women": "Stephanie Bruce (2:35:28)",
+          "2021 - Men": "Albert Korir (2:08:22)",
+          "2021 - Women": "Peres Jepchirchir (2:22:39)"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -73.9708,
+            40.68295
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "Marathon": "Chicago",
+          "2015 - Men": "Dickson Chumba (2:09:25)",
+          "2015 - Women": "Florence Kiplagat (2:23:33)",
+          "2016 - Men": "Abel Kirui (2:11:23)",
+          "2016 - Women": "Florence Kiplagat (2:21:32)",
+          "2017 - Men": "Galen Rupp (2:09:20)",
+          "2017 - Women": "Tirunesh Dibaba (2:18:31)",
+          "2018 - Men": "Mo Farah (2:05:11)",
+          "2018 - Women": "Brigid Kosgei (2:18:35)",
+          "2019 - Men": "Lawrence Cherono (2:05:45)",
+          "2019 - Women": "Brigid Kosgei (2:14:04)",
+          "2020 - Men": "cancelled",
+          "2020 - Women": "cancelled",
+          "2021 - Men": "Seifu Tura (2:06:12)",
+          "2021 - Women": "Ruth Chepngetich (2:22:31)"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -87.66063,
+            41.87897
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "Marathon": "Boston",
+          "2015 - Men": "Lesila Desisa (2:09:17)",
+          "2015 - Women": "Caroline Rotich (2:24:55)",
+          "2016 - Men": "Lem Berhanu Hayle (2:12:45)",
+          "2016 - Women": "Atsede Bayisa (2:29:19)",
+          "2017 - Men": "Geoffrey Kirui (2:09:37)",
+          "2017 - Women": "Edna Kiplagat (2:21:52)",
+          "2018 - Men": "Yuki Kawauchi (2:15:58)",
+          "2018 - Women": "Desiree Linden (2:39:54)",
+          "2019 - Men": "Lawrence Cherono (2:07:57)",
+          "2019 - Women": "Worknesh Degefa (2:23:31)",
+          "2020 - Men": "cancelled",
+          "2020 - Women": "cancelled",
+          "2021 - Men": "Benson Kipruto (2:09:51)",
+          "2021 - Women": "Edna Kiplagat (2:25:09)"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -71.048611,
+            42.355492
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "Marathon": "Bayshore",
+          "2015 - Men": "Joseph Purpura (2:24:54)",
+          "2015 - Women": "Nicole Michmerhuizen (2:49:21)",
+          "2016 - Men": "Matt Mcsween (2:24:36)",
+          "2016 - Women": "Laura Portis (2:44:01)",
+          "2017 - Men": "Mark Beams (2:25:11)\t",
+          "2017 - Women": "Jordan Chester (2:50:30)\t",
+          "2018 - Men": "Connor Kamm (2:20:48)",
+          "2018 - Women": "Sarah Kasabian-Larson (2:52:50)",
+          "2019 - Men": "Ryan Corby (2:24:15)",
+          "2019 - Women": "Joanna Stephens (2:43:47)\t",
+          "2020 - Men": "cancelled",
+          "2020 - Women": "cancelled",
+          "2021 - Men": "cancelled",
+          "2021 - Women": "cancelled"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -85.588731,
+            44.72251
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "Marathon": "Paris",
+          "2015 - Men": "Mark Korir (2:05:49)",
+          "2015 - Women": "Mesert Mingistu (2:23:26)",
+          "2016 - Men": "Cyprian Kotut (2:07:11)",
+          "2016 - Women": "Visiline Jepkesho (2:25:53)",
+          "2017 - Men": "Paul Lonyangata (2:06:10)",
+          "2017 - Women": "Purity Rionoripo (2:20:55)",
+          "2018 - Men": "Paul Lonyangta (2:06:25)",
+          "2018 - Women": "Betsy Saina (2:22:56)",
+          "2019 - Men": "Abrha Milaw (2:07:05)",
+          "2019 - Women": "Gelete burka (2:22:47)",
+          "2020 - Men": "cancelled",
+          "2020 - Women": "cancelled",
+          "2021 - Men": "Elisha Rotich (2:04:21)",
+          "2021 - Women": "Tigist Memuye (2:26:11)"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            2.331839,
+            48.859116
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "Marathon": "Dubai",
+          "2015 - Men": "Lemi Berhanu (2:05:28)",
+          "2015 - Women": "Aselefech Mergia (2:20:02)",
+          "2016 - Men": "Tesfaye Abera (2:04:24)",
+          "2016 - Women": "Tirfi Tsegay (2:19:41)",
+          "2017 - Men": "Tamirat Tola (2:04:11)",
+          "2017 - Women": "Worknesh Degefa (2:22:36)",
+          "2018 - Men": "Mosinet Geremew (2:04:00)",
+          "2018 - Women": "Roza Dereje (2:19:17)",
+          "2019 - Men": "Getaneh Molla (2:03:34)",
+          "2019 - Women": "Ruth Chepngetich (2:17:08)",
+          "2020 - Men": "Olika Adugna (2:06:15)",
+          "2020 - Women": "Worknesh Degefa (2:19:38)",
+          "2021 - Men": "cancelled",
+          "2021 - Women": "cancelled"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            55.30472,
+            25.25817
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "Marathon": "Amsterdam",
+          "2015 - Men": "Bernard Kipyedo (2:06:19)",
+          "2015 - Women": "Jayce Chepkirui (2:24:11)",
+          "2016 - Men": "Daniel Wanjiru (2:05:21)",
+          "2016 - Women": "Meselech Melkamu (2:23:21)",
+          "2017 - Men": "Lawrence Cherono (2:05:09)",
+          "2017 - Women": "Tadelech Bekele (2:21:54)",
+          "2018 - Men": "Lawrence Cherono (2:04:06)",
+          "2018 - Women": "Tadele Bekele (2:23:14)",
+          "2019 - Men": "Vincent Kipchuma (2:05:09)",
+          "2019 - Women": "Degitu Azimeraw (2:19:26)",
+          "2020 - Men": "cancelled",
+          "2020 - Women": "cancelled",
+          "2021 - Men": "Tamirat Tola (2:03:38)",
+          "2021 - Women": "Angela Tanui (2:17:57)"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            4.89973,
+            52.37243
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "Marathon": "TorontoWaterfront",
+          "2015 - Men": "Ishhimael Chemtan (2:09:00)",
+          "2015 - Women": "Shure Demise (2:23:37)",
+          "2016 - Men": "Philemon Rono (2:08:26)",
+          "2016 - Women": "Shure Demise (2:25:16)",
+          "2017 - Men": "Philemon Rono (2:07:24)",
+          "2017 - Women": "Marta Megra (2:28:20)",
+          "2018 - Men": "Benson Kipruto (2:07:24)",
+          "2018 - Women": "Mimi Belete (2:22:28)",
+          "2019 - Men": "Philemon Rono (2:05:00)",
+          "2019 - Women": "Magdalyne Masai (2:22:16)",
+          "2020 - Men": "cancelled",
+          "2020 - Women": "cancelled",
+          "2021 - Men": "cancelled",
+          "2021 - Women": "cancelled"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -79.38171,
+            43.64877
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "Marathon": "Los Angeles",
+          "2015 - Men": "Daniel Limo (2:10:36)",
+          "2015 - Women": "Ogla Kimaiyo (2:34:10)",
+          "2016 - Men": "Weldon Kirui (2:13:06)",
+          "2016 - Women": "Nataliya Lehonkova (2:30:40)",
+          "2017 - Men": "Elisha Barno (2:11:53)",
+          "2017 - Women": "Hellen Jepkurgat (2:34:24)",
+          "2018 - Men": "Weldon Kirui (2:11:47)",
+          "2018 - Women": "Sule Gedo (2:33:50)",
+          "2019 - Men": "Elisha Barno (2:11:45)",
+          "2019 - Women": "Askale Marachi (2:24:11)",
+          "2020 - Men": "Bayelign Teshager (2:08:26)",
+          "2020 - Women": "Margaret (2:29:27)",
+          "2021 - Men": "John Korir (2:12:47)",
+          "2021 - Women": "Natasha Cockram (2:33:16) "
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -118.25703,
+            34.05513
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "Marathon": "Rotterdam",
+          "2015 - Men": "Abera Kuma (2:06:47)",
+          "2015 - Women": "Asamai Kato (2:26:30)",
+          "2016 - Men": "Marius Kipserem (2:06:11)",
+          "2016 - Women": "Letebrhan Haylay (2:26:15)",
+          "2017 - Men": "Marius Kimutai (2:06:04)",
+          "2017 - Women": "Meskerem (2:24:18)",
+          "2018 - Men": "Kenneth Kipkemoi (2:05:44)",
+          "2018 - Women": "Visiline Jepkesho (2:23:47)",
+          "2019 - Men": "Marius Kipserem (2:04:11)",
+          "2019 - Women": "Ashete Bekere(2:22:55)",
+          "2020 - Men": "cancelled",
+          "2020 - Women": "cancelled",
+          "2021 - Men": "Bashir Abdi (2:03:36)",
+          "2021 - Women": "Stella Barsosio (2:22:08)"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            4.47578,
+            51.92278
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "Marathon": "Frankfurt",
+          "2015 - Men": "Sisay Lemma (2:06:26)",
+          "2015 - Women": "Gulume Tollesa (2:23:12)",
+          "2016 - Men": "Mark Korir (2:06:48)",
+          "2016 - Women": "Mamitu Daska (2:25:27)",
+          "2017 - Men": "Shura Kitata (2:05:50)",
+          "2017 - Women": "Vivian Cheruiyot (2:23:35)",
+          "2018 - Men": "Kelkile Gezahegn (2:06:37)",
+          "2018 - Women": "Meskerem Assefa (2:20:36)",
+          "2019 - Men": "Fikre Bekele (2:07:08)",
+          "2019 - Women": "Valary Aiyabei (2:19:10)",
+          "2020 - Men": "cancelled",
+          "2020 - Women": "cancelled",
+          "2021 - Men": "cancelled",
+          "2021 - Women": "cancelled"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            8.584764,
+            50.041821
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "Marathon": "Grand Rapids",
+          "2015 - Men": "Brendan Molony (2:31:11)",
+          "2015 - Women": "Angela Swain (2:57:51)",
+          "2016 - Men": "Mike Camilleri (2:31:13)",
+          "2016 - Women": "Jessie Lair (2:51:39)",
+          "2017 - Men": "Mike Camilleri (2:34:40)",
+          "2017 - Women": "Sarah Sandborn (2:58:03)",
+          "2018 - Men": "Griffin Bohannon (2:25:17)",
+          "2018 - Women": "Lauren Kersjes (2:52:42)",
+          "2019 - Men": "Richard Williams (2:35:17)",
+          "2019 - Women": "Ashley Higginson (2:43:45)",
+          "2020 - Men": "cancelled",
+          "2020 - Women": "cancelled",
+          "2021 - Men": "Dylan Sykes (2:28:55)",
+          "2021 - Women": "Tea Romanoski (3:01:01)"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -85.661973,
+            42.966709
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "Marathon": "Tokyo",
+          "2015 - Men": "Endeshaw (2:06:00)",
+          "2015 - Women": "Birhane Dibab (2:23:15)",
+          "2016 - Men": "Feyisa Lilesa (2:06:56)",
+          "2016 - Women": "Helah Kiprop (2:21:27)",
+          "2017 - Men": "Wilson Kipsang (2:03:58)",
+          "2017 - Women": "Sarah Chipchirchir (2:19:47)",
+          "2018 - Men": "Dickson Chumba (2:05:30)",
+          "2018 - Women": "Birhane Dibaba (2:19:51)",
+          "2019 - Men": "Birhanu Legese (2:04:48)",
+          "2019 - Women": "Ruti Aga (2:20:40)",
+          "2020 - Men": "Birhanu Legese (2:04:15)",
+          "2020 - Women": "Lonah Chemtai Salpeter (2:17:45)",
+          "2021 - Men": "Eliud Kipchoge (2:02:40)",
+          "2021 - Women": "Bridgid Kosgei (2:16:02)"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            139.75391,
+            35.695126
+          ]
+        }
+      }
+    ]
+  }
