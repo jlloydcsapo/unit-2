@@ -144,12 +144,12 @@
           "2015 - Women": "Nicole Michmerhuizen (2:49:21)",
           "2016 - Men": "Matt Mcsween (2:24:36)",
           "2016 - Women": "Laura Portis (2:44:01)",
-          "2017 - Men": "Mark Beams (2:25:11)\t",
-          "2017 - Women": "Jordan Chester (2:50:30)\t",
+          "2017 - Men": "Mark Beams (2:25:11)",
+          "2017 - Women": "Jordan Chester (2:50:30)",
           "2018 - Men": "Connor Kamm (2:20:48)",
           "2018 - Women": "Sarah Kasabian-Larson (2:52:50)",
           "2019 - Men": "Ryan Corby (2:24:15)",
-          "2019 - Women": "Joanna Stephens (2:43:47)\t",
+          "2019 - Women": "Joanna Stephens (2:43:47)",
           "2020 - Men": "cancelled",
           "2020 - Women": "cancelled",
           "2021 - Men": "cancelled",
@@ -288,7 +288,7 @@
           "2020 - Men": "Bayelign Teshager (2:08:26)",
           "2020 - Women": "Margaret (2:29:27)",
           "2021 - Men": "John Korir (2:12:47)",
-          "2021 - Women": "Natasha Cockram (2:33:16) "
+          "2021 - Women": "Natasha Cockram (2:33:16)"
         },
         "geometry": {
           "type": "Point",
