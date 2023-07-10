@@ -1,5 +1,6 @@
 var map;
 var minValue;
+var dataStats = {}; 
 
 //create map and load data
 function loadMap(){
@@ -16,7 +17,7 @@ function loadMap(){
     getData();
 };
 
-function calculateMinValue(data){
+function calcStats(data){
 
     //create empty array to store all data values
     var allValues = [];
@@ -40,13 +41,38 @@ function calculateMinValue(data){
               if (value > 0) {
                 allValues.push(value);
               }
+
         }
     }
     //get minimum value of our array
-    var minValue = Math.min(...allValues)
-    console.log('Minimum value:' + minValue)
-    return minValue;
-}
+    minValue = Math.min(...allValues)
+
+    //get min, max, mean stats for our array
+    dataStats.min = 3
+    dataStats.max = Math.max(...allValues);
+    //calculate meanValue
+    var sum = allValues.reduce(function(a, b){return a+b;});
+    dataStats.mean = sum/ allValues.length;
+
+    return minValue
+};
+
+function formatLegendText(time){
+    var avgTime = time/2;
+    var hours = Math.floor(avgTime/3600);
+    var minutesInSec = avgTime % 3600;
+    var minutes = Math.floor(minutesInSec/60);
+
+    var formattedMinutes = minutes < 10 ? minutes.toString().padStart(2,'0') : minutes;
+
+    var secs = Math.floor(minutesInSec % 60);
+
+    var formattedSecs = secs < 10 ? secs.toString().padStart(2,'0') : secs;
+
+    var text = hours + ':' + formattedMinutes + ':' + formattedSecs;   
+
+    return text;
+};
 
 //calculate the radius of each proportional symbol
 function calcPropRadius(attValue) {
@@ -55,13 +81,15 @@ function calcPropRadius(attValue) {
     var minRadius = 5;
     
     //Flannery Apperance Compensation formula (adjusted)
+
     var radius = 1.0083 * Math.pow(attValue/minValue,0.75) * minRadius
 
     //if radius is 0, set to 3
-    radius = radius == 0 ? 3 : radius;
+    radius = radius == 0 ? 3
+     : radius;
 
     console.log('radius:' + radius)
-    return radius;
+    return radius*2;
 };
 
 //create proportional symbols
@@ -122,12 +150,16 @@ function extractMarathonTime(attr) {
     return timesInSeconds;
 };
 
-function pointToLayer(feature, latlng, attributes) {
+function createPopupContent(properties, attributes){
+    var popupContent = "<p><b> Marathon: </b> " + properties['Marathon'] + "</p>";
 
-     //attributes to be used to determine proportional size
-     var attr1 = attributes[0];
-     var attr2 = attributes[1];
- 
+    popupContent += "<p><b>" + attributes[0] + " :</b> " + properties[attributes[0]] + "</p>";
+    popupContent += "<p><b>" + attributes[1] + " :</b> " + properties[attributes[1]] + "</p>";
+
+    return popupContent;
+};
+
+function pointToLayer(feature, latlng, attributes) {
  
      var geojsonMarkerOptions = {
          fillColor: "#826ab8",
@@ -141,8 +173,8 @@ function pointToLayer(feature, latlng, attributes) {
             
     //empty array to hold times passed into calcPropAttrValue
     var calcAtttributes = [];
-    calcAtttributes.push(feature.properties[attr1]);
-    calcAtttributes.push(feature.properties[attr2]);
+    calcAtttributes.push(feature.properties[attributes[0]]);
+    calcAtttributes.push(feature.properties[attributes[1]]);
             
     //get attribute value to be used
     var attValue = calcPropAttrValue(calcAtttributes);
@@ -156,12 +188,7 @@ function pointToLayer(feature, latlng, attributes) {
     layer = L.circleMarker(latlng, geojsonMarkerOptions);
 
     //build popup content string
-    var popupContent = "<p><b> Marathon: </b> " + feature.properties['Marathon'] + "</p>";
-
-    popupContent += "<p><b>" + attr1 + " :</b> " + feature.properties[attr1] + "</p>";
-    popupContent += "<p><b>" + attr2 + " :</b> " + feature.properties[attr2] + "</p>";
-
-   
+    var popupContent = createPopupContent(feature.properties, attributes);
      
     layer.bindPopup(popupContent, {
             offset: new L.Point(0,-geojsonMarkerOptions.radius) 
@@ -188,26 +215,57 @@ function updatePropSymbols(attributes){
            
             //calculate radius
             var radius = calcPropRadius(attValue);
-
+            
             layer.setRadius(radius);
+            
+            if (radius == 6) {
+                layer.setStyle({fillColor: 'red'});
+            } else {
+                layer.setStyle({fillColor: "#826ab8" })
+            };
+            
 
             //build popup content string
-            var popupContent = "<p><b> Marathon: </b> " + props.Marathon+ "</p>";
-
-            popupContent += "<p><b>" + attributes[0] + " :</b> " + props[attributes[0]] + "</p>";
-            popupContent += "<p><b>" + attributes[1] + " :</b> " + props[attributes[1] ] + "</p>";
+            var popupContent = createPopupContent(props, attributes);
 
             //update popup content            
             popup = layer.getPopup();            
             popup.setContent(popupContent).update();
+         
         }
+        
     });
+
+    updateLegend(attributes);
+    
 };
 
 function createSequenceControls(attributes){
-    //create range input element (slider)
-    var slider = "<input class='range-slider' type='range'></input>";
-    document.querySelector("#panel").insertAdjacentHTML('beforeend',slider);
+    var SequenceControl = L.Control.extend({
+            options: {
+                position: 'bottomleft'
+            },
+
+            onAdd: function() {
+                //create control container div 
+                var container = L.DomUtil.create('div', 'sequence-control-container');
+                
+                //add slider
+                container.insertAdjacentHTML('beforeend', '<input class="range-slider" type = "range">')
+                
+                //add skip buttons
+                container.insertAdjacentHTML('beforeend', '<button class="step" id="reverse" title="Reverse"><img src="img/reverse-button.png"></button>'); 
+                container.insertAdjacentHTML('beforeend', '<button class="step" id="forward" title="Forward"><img src="img/forward-button.png"></button>');
+                
+                //disable any mouse event listeners for the container
+                L.DomEvent.disableClickPropagation(container);
+
+                return container
+            }
+        });
+
+    map.addControl(new SequenceControl());
+
 
     //set slider attributes
     document.querySelector(".range-slider").max = 12;
@@ -215,11 +273,6 @@ function createSequenceControls(attributes){
     document.querySelector(".range-slider").value = 0;
     document.querySelector(".range-slider").step = 2;
 
-    document.querySelector('#panel').insertAdjacentHTML('beforeend','<button class="step" id="reverse"></button>');
-    document.querySelector('#panel').insertAdjacentHTML('beforeend','<button class="step" id="forward"></button>');
-
-    document.querySelector('#reverse').insertAdjacentHTML('beforeend',"<img src='img/reverse-button.png'>");
-    document.querySelector('#forward').insertAdjacentHTML('beforeend',"<img src='img/forward-button.png'>");
 
     //click listener for buttons
     document.querySelectorAll('.step').forEach(function(step){
@@ -267,6 +320,87 @@ function createSequenceControls(attributes){
             
         updatePropSymbols(updatePropAttributes);
     });
+
+};
+
+//create circle markers for legend
+function createCircleSVG(){
+    var svg = '<svg id="attribute-legend" width="200px" height="130px">';
+            
+    //array of circle names to base loop on
+     var circles = ["max", "mean", "min"];
+
+    for (var i=0; i<circles.length; i++){
+
+        var textY = i * 20 + 10;            
+    
+        var text = formatLegendText(dataStats[circles[i]]);
+        
+        //scale proportionally for visual cues
+        var radius = calcPropRadius(dataStats[circles[i]]) * 2;  
+        console.log(radius)
+        var cy =55 - radius;  
+        
+       //text string
+       if (circles[i] == "min") {
+        //circle string  
+       svg += '<circle class="legend-circle" id="' + circles[i] + '" r="' + 12 + '"cy="' + 43 + '" fill="#d60f12" fill-opacity="0.8" stroke="#000000" cx="30"/>';
+       svg += '<text font-family="Verdana, sans-serif" font-size="12px" id="' + circles[i] + '-text" x="65" y="' + textY + '"> Cancelled </text>';  
+       }  else {
+        console.log('circle raidus: ' + radius);
+        svg += '<circle class="legend-circle" id="' + circles[i] + '" r="' + radius + '"cy="' + cy + '" fill="#d19aea" fill-opacity="0.8" stroke="#000000" cx="30"/>';  
+        svg += '<text font-family="Verdana, sans-serif" font-size="12px" id="' + circles[i] + '-text" x="65" y="' + textY + '">' + text  + '</text>';
+       };      
+ 
+    };
+     
+
+    //close svg string
+    svg += "</svg>";
+
+    return svg
+};
+
+//create legend
+function createLegend() {
+    var LegendControl = L.Control.extend({
+        options: {
+            position: 'bottomright'
+        },
+
+        onAdd: function () {
+            var container = L.DomUtil.create('div', 'legend-control-container');
+           
+            var legendContent = "<h2><b>Avg Marathon Times - 2015 </b> </h2>";
+
+            //add legend content
+            container.innerHTML = legendContent;
+
+            var svg = createCircleSVG()
+
+            //add attribute legend svg to container
+            container.insertAdjacentHTML('beforeend',svg);
+            
+            return container;
+        }
+    });
+
+    map.addControl(new LegendControl());
+};
+
+//update legend
+function updateLegend(attributes) {
+    var legend =  document.querySelector(".legend-control-container")
+    var year = attributes[0].substring(0,4);
+
+    var legendContent = "<h2><b>Avg Marathon Times - " + year + "</b></h2>";
+    
+    legend.innerHTML = legendContent
+
+    var svg = createCircleSVG()
+
+    //add attribute legend svg to container
+    legend.insertAdjacentHTML('beforeend',svg);
 };
 
 function processData(data){
@@ -300,11 +434,12 @@ function getData(){
              //create an attributes array
             var attributes = processData(json);
             //calculate minimum data value
-            minValue = calculateMinValue(json);
+            minValue = calcStats(json);
 
             //call function to create proportional symbols
             createPropSymbols(json, attributes);
             createSequenceControls(attributes);
+            createLegend(attributes)
         })
 };
 

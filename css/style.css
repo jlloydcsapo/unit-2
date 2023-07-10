@@ -1,17 +1,39 @@
 #map {
-    height: 800px;
-    width: 80%;
+    height: 700px;
+    width: 100%;
     display: inline-block;
     }
     
-    #panel{
-        width: 16%;
-        padding: 20px;
-        display: inline-block;
-        vertical-align: top;
-        text-align: center;
-        line-height: 42px;
-    }
+.sequence-control-container {  
+    width: 500px;  
+    height: 30px;  
+    background-color: rgba(209, 154, 234, 0.8);  
+    padding: 10px;  
+    line-height: 45px;  
+    text-align: center;  
+    border: solid gray 1px;  
+}
+
+.title-container {  
+    width: 500px;  
+    height: 30px;  
+    background-color: rgba(209, 154, 234, 0.8);  
+    padding: 10px;  
+    line-height: 45px;  
+    text-align: center;  
+    border: solid gray 1px;  
+} 
+
+.legend-control-container {
+    display: table-cell;
+    width: 250px;  
+    height: 130px;  
+    background-color: rgba(239, 231, 243, 0.8);  
+    padding: 5px;    
+    text-align: center;  
+    vertical-align: middle;
+    border: solid gray 1px;  
+} 
 
 .leaflet-popup-content p {
     margin: 0.2em 0;
@@ -19,25 +41,33 @@
 }
 
 .range-slider {  
-    width: 55%;  
+    width: 60%;  
 }  
 
 .step {  
-    width: 20%;  
+    width: 10%;  
+    height: 90%
 }  
 
 .step img {  
-    width: 100%;  
+    width: 45%;  
 }  
 
 #forward {  
-    float: right;  
-    height: 15%;
-    width: 15%;
+    float: right;
 }  
 
 #reverse {  
-    float: left; 
-    height: 15%;
-    width: 15%; 
+    float: left;
 }
+
+
+#title {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    width: 100%;
+    height: 10%;
+    vertical-align: middle ;
+    border: 5px solid;
+    background-color: rgba(209, 154, 234, 0.8);
+    text-align: center;
+  }
